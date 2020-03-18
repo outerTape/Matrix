@@ -4,18 +4,13 @@
 
 int main() {
 	
-	/*Matrix A = Matrix(2, 2);
-	Matrix B = Matrix(2, 2);
+	Matrix A = Matrix({ 1.0f,2.0f,3.0f,4.0f }, 2, 2);
+	Matrix B = Matrix({ 2.0f,3.0f,4.0f,5.0f }, 2, 2);
 
-	A.fill(2.0f);
-	B.fill(3.0f);
-	(A*B).print();*/
+	A.print();
+	B.print();
+	Matrix C = A * B;
+	C.print();
+	std::cout << C.max();
 	
-	std::vector<float> x{ 1.0f,2.0f };
-	std::vector<float> y;
-	y = x;
-	for (int i = 0; i < x.size(); i++) {
-		std::cout << x[i];
-	}
-	std::cout << std::endl;
 }

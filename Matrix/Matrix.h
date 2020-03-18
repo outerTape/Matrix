@@ -82,4 +82,14 @@ struct Matrix {
         }
         return product;
     }
+
+    float& max() {
+        float& max = matrix_values[0];
+        for (int i = 0; i < n_cols * n_rows; i++) {
+            if (max < matrix_values[i]) {
+                max = matrix_values[i];
+            }
+        }
+        return max;
+    }
 };
