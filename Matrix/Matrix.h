@@ -13,6 +13,10 @@ struct Matrix {
     }
 
     Matrix(std::vector<float> values, int a, int b) {
+        if (values.size() != a * b) {
+            std::printf("Values and dimensions of the matrix are not compatible!");
+            exit(-1);
+        }
         n_rows = a;
         n_cols = b;
         assign(values);
@@ -32,6 +36,10 @@ struct Matrix {
     }
 
     void assign(std::vector<float> values) {
+        if (values.size() != n_cols * n_rows) {
+            std::printf("Values and dimensions of the matrix are not compatible!");
+            exit(-1);
+        }
         matrix_values = values;
     }
 
